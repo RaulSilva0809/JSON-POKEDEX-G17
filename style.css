@@ -1,3 +1,4 @@
+/* Setting the font-family to the font I want to use. */
 *,*:before,*:after{
     margin:0;
     padding: 0;
@@ -21,9 +22,10 @@ html{
 body{
     font-family: 'Press Start 2P', cursive;
 }
-/*
+/*s
 ---CARD---
 */
+/* The CSS code for the card. */
 .background{
     background-image: url("https://i.pinimg.com/originals/ca/e0/1a/cae01ab5cce960db0d7819cc96e97ce8.png");
     background-size: cover;
@@ -41,7 +43,8 @@ body{
 }
 .card{
     height: 90vh;
-    width: 35rem;
+    width: 40rem;
+    left: 480px;
     min-width:35rem;
     box-shadow: 0 1.5rem 4rem rgba(0,0,0, 0.6);
     margin:2rem;
@@ -74,6 +77,7 @@ body{
 /* 
 ---TEXTO--- 
 */
+/* Just styling the elements. */
 .card-text{
  font-size: 1.5rem;
  text-align: center;
@@ -114,7 +118,7 @@ body{
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
-    padding: 2rem;
+    padding: 10px;
     font-size: 1.3rem;
     color: black;
     font-weight: 700;
@@ -149,5 +153,25 @@ body{
     position: absolute;
     margin-left: 10em;
 }
-
-
+/*
+--HOVER--
+*/
+/* This is the hover effect for the card. When you hover over the card, the image will rotate -15
+degrees,
+the width will be 30rem, the margin-top will be -6.2rem, the position will be relative, the z-index
+will be 50,
+and the transform will be rotate(-15deg). */
+.card:hover .card-image img{
+    width: 30rem;
+    margin-top: -6.2rem;
+    position: relative;
+    z-index:50;
+    transform: rotate(-15deg);
+}
+/* A media query that is saying if the screen is at least 1800px wide, then the card will be 780px from
+the left. */
+@media (min-width: 1800px){
+    .card{
+        left: 780px;
+    }
+}
